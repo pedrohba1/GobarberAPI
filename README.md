@@ -38,14 +38,20 @@ Projeto do goBarber da RocketSeat.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-
-### Prerequisites
-
 É preciso criar um docker com postgres antes de tudo.
 A maneira como eu criei foi a seguinte:
 ```
 ❯ docker run --name postgresDatabase -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 ```
+
+depois, se o seu docker estiver off, você pode startar ele com:
+```
+❯ docker start postgresDatabase
+```
+
+### Prerequisites
+
+Você precisa ter o docker instalado e configurado na sua máquina.
 
 ### Installing
 
@@ -95,9 +101,8 @@ Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
+- [Postgres](https://www.postgresql.org) - Database
 - [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
 
 ## ✍️ Authors <a name = "authors"></a>
