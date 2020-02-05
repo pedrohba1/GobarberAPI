@@ -48,7 +48,13 @@ class AppointmentController {
 
         const { provider_id, date } = req.body;
 
-        // checa se o provider_id é um provedor de serviço
+        // checa se o provider não está marcando um agendamento para ele mesmo
+
+        if (provider_id === req.userId) {
+            return res.status(401).json({ error: 'provider cannot be itself' });
+        }
+
+        // checa se o provider_id é true para provedor de serviço
 
         const isProvider = await User.findOne({
             where: { id: provider_id, provider: true },
