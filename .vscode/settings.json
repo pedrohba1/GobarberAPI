@@ -2,7 +2,11 @@
     "git.ignoreLimitWarning": true,
     "cSpell.words": [
         "exphbs",
+        "mailchimp",
+        "mailgun",
+        "mailtrap",
         "middlewares",
-        "nodemailerhbs"
+        "nodemailerhbs",
+        "sparkspot"
     ]
 }
