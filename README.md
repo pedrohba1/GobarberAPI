@@ -38,16 +38,26 @@ Projeto do goBarber da RocketSeat.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-É preciso criar um docker com postgres antes de tudo.
+É preciso criar containers no docker de todas os bancos de dados e do redis antes.
 A maneira como eu criei foi a seguinte:
+
 ```
-❯ docker run --name postgresDatabase -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+#postgres
+docker run --name goBarberPostgres -e  POSTGRES_USER=goBarber -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
+#mongo
+docker run --name goBarberMongo -p 27017:27017 -d -t mongo
+#redis
+docker run --name goBarberRedis -p 6379:6379 -d -t redis:alpine
 ```
 
-depois, se o seu docker estiver off, você pode startar ele com:
+depois, se o seu docker estiver off, você pode startar esses containers com:
+
 ```
-❯ docker start postgresDatabase
+docker start goBarberPostgres
+docker start goBarberMongo
+docker start goBarberRedis
 ```
+
 
 ### Prerequisites
 
