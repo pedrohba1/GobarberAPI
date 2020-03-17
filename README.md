@@ -58,6 +58,10 @@ docker start goBarberMongo
 docker start goBarberRedis
 ```
 
+depois que você criar as tabelas com `yarn sequelize migration:create --name=create-recipient` você pode acrescentar elas to container com `yarn sequelize db:migrate`. Também é possível remover migrations com yarn `db:migrate:undo:all`
+
+Feitas as migrations, é preciso adicionar as seeds, com `yarn sequelize db:seed:all`
+
 
 ### Prerequisites
 
