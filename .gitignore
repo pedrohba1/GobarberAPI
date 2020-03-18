@@ -105,7 +105,12 @@ dist/
 .dynamodb/
 
 # Temporary folders
-tmp/
+tmp/uploads/*
 temp/
+
+# but don't ignore two files named:
+# (they are important for the seed)
+!/tmp/uploads/pepe1.png
+!/tmp/uploads/pepe2.jpg
 
 # End of https://www.gitignore.io/api/node
